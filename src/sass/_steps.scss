@@ -1,0 +1,152 @@
+.steps{
+    padding: 26.7rem 0 9.3rem 0;
+    background: url(../img/steps-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    @media only screen and (max-width: $mbl-land){
+        padding: 100px 0;
+        background-position: 30% 0;
+    }
+
+    &__item{
+        padding: 1rem;
+        border-radius: 1rem;
+        transition: all .3s;
+        position: relative;
+        z-index: 3;
+        opacity: .3;
+        margin-bottom: 9.5rem;
+        @media only screen and (max-width: $mbl-land){
+            margin-bottom: 3rem;
+        }
+        &-img{
+            i{
+                font-size: 6rem;
+                color: #fff;
+            }
+
+            margin-bottom: 5rem;
+        }
+
+        &-details{
+            h3.heading{
+                font-size: 2.6rem;
+                margin-bottom: 2rem;
+                color: #fff;
+            }
+
+            p.p__text{
+                font-size: 1.6rem;
+                color: #fff;
+            }
+        }
+
+    }
+
+
+    .owl-item.active.center{
+
+        .steps__item{
+            opacity: 1;
+            transform: scale(1.3);
+        }
+    }
+
+    .owl-carousel .owl-dots{
+        display: none;
+    }
+
+    .owl-carousel .owl-nav{
+        display: block;
+
+    @media only screen and (max-width: $laptop-port){
+        display: none;
+    }
+    @media only screen and (max-width: $mbl-land){
+        display: block;
+    }
+        .owl-prev,
+        .owl-next{
+            width: 5.7rem;
+            height: 5.7rem;
+            padding: 0;
+            text-align: center;
+            line-height: 2.5rem;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            outline: 0;
+            position: absolute;
+            top: 40%;
+            left: -10rem;
+            font-size: 3rem;
+            font-weight: 300;
+            color: #000;
+            line-height: 5.7rem;
+            transition: all .3s;
+
+            &:hover{
+                background: $color-primary;
+                color: #fff;
+            }
+            @media only screen and (max-width: $mbl-land){
+                left: 0rem;
+                top: 30%;
+                width: 30pt;
+                height: 30pt;
+                font-size: 2rem;
+                line-height: 30pt;
+            }
+        }
+
+        .owl-next{
+            left: inherit;
+            right: -10rem;
+            // transform: translateX(-50%);
+            @media only screen and (max-width: $mbl-land){
+                right: 0;
+            }
+        }
+
+
+    }
+
+    @media only screen and (max-width: $tab-port){
+        .btn{
+            display: none;
+        }
+    }
+
+
+    .owl-carousel .owl-stage-outer {
+        padding: 10rem 0rem;
+        width: 100%;
+    }
+
+
+
+    .btn-step{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16pt;
+        display: none;
+
+        @media only screen and (max-width: $tab-port){
+            display: block;
+            width: 90%;
+            max-width: 285pt;
+        }
+        @media only screen and (max-width: $mbl-port){
+            display: block;
+            width: 90%;
+            max-width: 285pt;
+            font-size: 14pt;
+        }
+    }
+}

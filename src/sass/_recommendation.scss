@@ -1,0 +1,55 @@
+.recommendation{
+    padding-top: 15rem;
+    h2.heading{
+        text-align: center;
+    }
+    
+
+    &__img{
+        position: relative;
+        overflow: hidden !important;
+        height: 26.3rem;
+        margin-bottom: 4.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 5pt 15pt #00000029;
+        @media only screen and (max-width: $mbl-land){
+            height: 118pt;
+        }
+
+        img{
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+        }
+
+        &-title{
+            position: absolute;
+            background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            padding:1.8rem 2.2rem;
+            @media only screen and (max-width: $mbl-land){
+                padding: 1rem 2rem;
+            }
+            .p__text{
+                font-size: 1.3rem;
+                color: #fff;
+                text-align: left;
+                font-weight: 800;
+                margin-bottom: 0;
+
+                @media only screen and (max-width: $mbl-land){
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+
+    
+
+}

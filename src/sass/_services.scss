@@ -1,0 +1,157 @@
+.services{
+    padding: 10rem 0;
+
+
+    &__item{
+        background: #ffffff 0% 0% no-repeat padding-box;
+        padding: 5rem 3.3rem 4rem 3.3rem;
+        border-radius: 1rem;
+        transition: all .3s;
+        position: relative;
+        z-index: 3;
+        min-height: 322px;
+        @media only screen and (max-width: $mbl-land){
+            
+        }
+        &-img{
+            i{
+                font-size: 6rem;
+                color: $color-primary;
+            }
+
+            margin-bottom: 5.5rem;
+        }
+
+        &-details{
+            h3.heading{
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                @media only screen and (max-width: $mbl-land){
+                    font-size: 2.5rem;
+                }
+            }
+
+            p.p__text{
+                font-size: 1.3rem;
+                @media only screen and (max-width: $mbl-land){
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        // &:hover{
+        //     box-shadow: 0px 45px 60px #00000029;
+        // }
+    }
+
+
+    .owl-item.active.center{
+
+        .services__item{
+            box-shadow: 0px 45px 60px #00000029;
+            @media only screen and (max-width: $mbl-land){
+                box-shadow: 0 15pt 25pt #00000029;
+            }
+        }
+    }
+
+    .owl-item{
+        @media only screen and (max-width: $mbl-land){
+            box-shadow: 0 15pt 25pt #00000029;
+        }
+    }
+
+    .owl-carousel .owl-dots{
+        display: none;
+    }
+    .owl-carousel .owl-nav{
+        display: block;
+
+        @media only screen and (max-width: $laptop-port){
+            display: none;
+        }
+        .owl-prev,
+        .owl-next{
+            width: 5.7rem;
+            height: 5.7rem;
+            padding: 0;
+            text-align: center;
+            line-height: 2.5rem;
+            background: #000000 0% 0% no-repeat padding-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            outline: 0;
+            position: absolute;
+            top: 40%;
+            left: -10rem;
+            font-size: 3rem;
+            font-weight: 300;
+            color: #fff;
+            line-height: 5.7rem;
+            transition: all .3s;
+
+            &:hover{
+                background: $color-primary;
+                
+            }
+        }
+
+        .owl-next{
+            left: inherit;
+            right: -10rem;
+            // transform: translateX(-50%);
+        }
+
+
+    }
+
+
+    .owl-stage-outer { 
+        overflow: visible;
+
+        position: relative;
+
+        @media only screen and (max-width: $mbl-land){
+            // padding: 2rem;
+        }
+
+        &::after{
+            content: '';
+            width: 150%;
+            height: 150%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: 0;
+            right: calc((-150% ) - 100px);
+            background: #fff;
+            z-index: 9;
+        }
+        &::before{
+            content: '';
+            width: 150%;
+            height: 150%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: 0;
+            left: calc((-150% ) - 100px);
+            background: #fff;
+            z-index: 9;
+        }
+
+        }
+        
+         .owl-item {
+           opacity: 0;
+           transition: all .5s;
+           @media only screen and (max-width: $mbl-land){
+            opacity: 1;
+        }
+        }
+        .owl-item.active {
+          opacity: 1;
+        }
+}

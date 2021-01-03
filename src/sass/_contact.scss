@@ -1,0 +1,91 @@
+.contact{
+    padding-top: 27.1rem;
+    padding-bottom: 17.1rem;
+    background: url(../img/contact-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__card{
+        max-width: 59.6rem;
+        background: #fff;
+        padding: 6.8rem 7.7rem;
+        box-shadow: 0 0 4.5rem #00000082;
+        border-radius: 1rem;
+        .mobile{
+            display: none;
+        }
+        @media only screen and (max-width: $mbl-land){
+            max-width: 42rem;
+            padding: 5rem 2.5rem;
+
+            .desktop{
+                display: none;
+            }
+            .mobile{
+                display: block;
+            }
+
+        }
+        h3.heading{
+            font-size: 2.6rem;
+            margin-bottom: 5rem;
+        }
+        .tac{
+            svg{
+                width: 5rem;
+                height: 5rem;
+                margin-bottom: 2rem;
+                .a{
+                    fill: #F8AF1D;
+                }
+            }
+        }
+
+        h4.heading{
+            a{
+                &:link,
+                &:visited{
+                    display: inline-block;
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+                    color: #000;
+                    @media only screen and (max-width: $mbl-land){
+                        font-size: 2.2rem;
+            
+                    }
+                }
+            }
+
+            &.underlined{
+                position: relative;
+
+                &::after{
+                    content: '_';
+                    position: absolute;
+                    display: block;
+                    line-height: 1;
+                    bottom: .5rem;
+                    text-align: center;
+                    font-size: 3rem;
+                    color: $color-primary;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        p.p__text{
+            font-size: 1.1rem;
+            margin-top: 5rem;
+
+            @media only screen and (max-width: $mbl-land){
+                font-size: 1.3rem;
+    
+            }
+        }
+    }
+}

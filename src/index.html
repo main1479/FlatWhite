@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlatWhite Home Bookings</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- font-awesome  -->
+    <script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/jquery.nice-number.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/zebra_datepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+
+<header class="header">
+    <div class="container big">
+        <nav class="d-flex aic navbar navbar-expand-md navbar-light pt-3">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="FlatWhite">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-icon">
+                    <img src="img/nav-icon.svg" alt="nav">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto d-flex aic">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cazările noastre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contul meu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+    </div>
+
+    <!-- ============= hero content ======================= -->
+
+    <div class="hero__text-box">
+        <h1 class="heading">Dorești să vizitezi Oradea?</h1>
+        <p class="p__text sub-heading">
+            Explorează fără griji, noi îți vom pune la dispoziție cele mai curate, populare și frumoase proprietății și servicii de care ai avut parte până acum, să fie în ton cu experiența vizitei tale!
+        </p>
+        <div class="booking">
+            <div class="booking__options">
+                <div class="booking__options-option">
+                    <p class="p__text town">
+                        Localitatea
+                        <span class="town-name">
+                            Oradea
+                        </span>
+                    </p>
+                </div>
+                <div class="booking__options-option">
+                    <p class="p__text check-in">
+                        Check-in
+                        <span class="add-date">
+                            <label for="checkIn">Adaugă data</label>
+                            <input id="checkIn" type="date">
+                        </span>
+                    </p>
+                </div>
+                <div class="booking__options-option">
+                    <p class="p__text check-out">
+                        Check-out
+                        <span class="add-date">
+                            <label for="checkOut">Adaugă data</label>
+                            <input id="checkOut" type="date">
+                        </span>
+                    </p>
+                </div>
+                <div class="booking__options-option">
+                    <p class="p__text guests">
+                        Oaspeți
+                        <span class="guest-count">
+                            <select name="guest Count" id="guestCount">
+                                <option value="1">Adaugă data</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <a href="#" class="btn btn-booking">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+    
+
+    <a href="#" data-toggle="modal" data-target="#bookform" class="btn btn-header">Disponibilitate</a>
+<!-- ======================================== -->
+<!-- ============ popup box ================ -->
+<!-- ======================================== -->
+<div class="container">
+<div class="modal fade" id="bookform" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Alege perioada</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="town">
+                <select class="wide" style="display: none;">
+                    <option data-display="Select">Nothing</option>
+                    <option value="1">Some option</option>
+                    <option value="2">Another option</option>
+                    <option value="3" disabled="">A disabled option</option>
+                    <option value="4">Potato</option>
+                 </select>
+                 <div class="nice-select wide" tabindex="0">
+                    <span class="current">Localitatea</span>
+                    <ul class="list">
+                       <li data-value="Nothing" data-display="Select" class="option selected focus">Nothing</li>
+                       <li data-value="1" class="option">Some option</li>
+                       <li data-value="2" class="option">Another option</li>
+                       <li data-value="3" class="option disabled">A disabled option</li>
+                       <li data-value="4" class="option">Potato</li>
+                    </ul>
+                 </div>
+            </div>
+
+            <div class="check-in">
+                <select class="wide" style="display: none;">
+                    <option data-display="Select">Nothing</option>
+                    <option value="1">Some option</option>
+                    <option value="2">Another option</option>
+                    <option value="3" disabled="">A disabled option</option>
+                    <option value="4">Potato</option>
+                 </select>
+                 <div class="nice-select wide" tabindex="0">
+                    <span class="current">Check-in</span>
+                    <ul class="list">
+                       <li data-value="Nothing" data-display="Select" class="option selected focus">Nothing</li>
+                       <li data-value="1" class="option">Some option</li>
+                       <li data-value="2" class="option">Another option</li>
+                       <li data-value="3" class="option disabled">A disabled option</li>
+                       <li data-value="4" class="option">Potato</li>
+                    </ul>
+                 </div>
+            </div>
+
+            <div class="check-out">
+                <select class="wide" style="display: none;">
+                    <option data-display="Select">Nothing</option>
+                    <option value="1">Some option</option>
+                    <option value="2">Another option</option>
+                    <option value="3" disabled="">A disabled option</option>
+                    <option value="4">Potato</option>
+                 </select>
+                 <div class="nice-select wide" tabindex="0">
+                    <span class="current">Check-out</span>
+                    <ul class="list">
+                       <li data-value="Nothing" data-display="Select" class="option selected focus">Nothing</li>
+                       <li data-value="1" class="option">Some option</li>
+                       <li data-value="2" class="option">Another option</li>
+                       <li data-value="3" class="option disabled">A disabled option</li>
+                       <li data-value="4" class="option">Potato</li>
+                    </ul>
+                 </div>
+            </div>
+
+            <div class="guests">
+                <h3 class="heading">Oaspeți</h3>
+                <div class="row d-flex aic">
+                    <div class="col-8">
+                        <h4 class="heading">Adulți (Vârsta 16+)</h4>
+                    </div>
+                    <div class="col-4 number">
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="row d-flex aic">
+                    <div class="col-8">
+                        <h4 class="heading">Copii (Vârsta 1-3)</h4>
+                    </div>
+                    <div class="col-4 number">
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="row d-flex aic">
+                    <div class="col-8">
+                        <h4 class="heading">Copii (Vârsta 3-15)</h4>
+                    </div>
+                    <div class="col-4 number">
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 mt-3">
+                        <label class="heading" for="checkbox10">Animale de companie</label>
+                    </div>
+                    <div class="col-4 check-box">
+                        <input type="checkbox" checked="" name="checkbox4" id="checkbox10">
+                        <label for="checkbox10"><span></span></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra">
+                <div class="row check-box">
+                    <input type="checkbox" checked="" name="checkbox4" id="checkbox11">
+                    <label for="checkbox11"><span></span>Parcare inclusă</label>
+                </div>
+                <div class="row check-box">
+                    <input type="checkbox" checked="" name="checkbox4" id="checkbox12">
+                    <label for="checkbox12"><span></span>Mic dejun inclus</label>
+                </div>
+            </div>
+
+
+            <div class="btn-box">
+                <a href="#" class="btn db btn-popup">Salvează datele</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</header>
+
+<!-- ================================================= -->
+<!-- ========== our recommendation section =========== -->
+<!-- ================================================= -->
+<section class="recommendation">
+    <div class="container">
+        <h2 class="heading">
+            Recomandările noastre, în Oradea
+        </h2>
+        <p class="p__text sub-heading">
+            Descoperă cele mai populare proprietăți în Oradea, ideale pentru orice buget și indifferent de perioada pe care dorești să o petreci în vizită.
+        </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-6">
+                <figure class="recommendation__img">
+                    <img src="img/recommend1.jpg" alt="recommended">
+                    <div class="recommendation__img-title">
+                        <p class="p__text">Central apartment</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-6">
+                <figure class="recommendation__img">
+                    <img src="img/recommend2.jpg" alt="recommended">
+                    <div class="recommendation__img-title">
+                        <p class="p__text">Cameră în zonă semi-centrală</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-6">
+                <figure class="recommendation__img">
+                    <img src="img/recommend3.jpg" alt="recommended">
+                    <div class="recommendation__img-title">
+                        <p class="p__text">Apartament întreg la 10 minute de centru</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-6">
+                <figure class="recommendation__img">
+                    <img src="img/recommend4.jpg" alt="recommended">
+                    <div class="recommendation__img-title">
+                        <p class="p__text">Andreea's loft</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-6">
+                <figure class="recommendation__img">
+                    <img src="img/recommend5.jpg" alt="recommended">
+                    <div class="recommendation__img-title">
+                        <p class="p__text">Penthouse locație centrală</p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-lg-4 col-6">
+                <figure class="recommendation__img">
+                    <img src="img/recommend6.jpg" alt="recommended">
+                    <div class="recommendation__img-title">
+                        <p class="p__text">Dozsa Apartments</p>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- ========== our recommendation section =========== -->
+<!-- ================================================= -->
+<section class="interest">
+    <div class="container">
+        <h2 class="heading">
+            Puncte de interes
+        </h2>
+        <p class="p__text sub-heading">
+            Oradea oferă o sumedenie de locații ușor de vizitat și interesante sau chiar unice. Iată propunerile noastre pentur a vizita, indifferent de perioada pe care o petreci în oraș.
+        </p>
+    </div>
+    <div class="container">
+        <div class="owl-carousel owl-theme owl-carousel1">
+            <div class="interest__item">
+                <div class="interest__item-img">
+                    <img src="img/recommend1.jpg" alt="interest">
+                </div>
+                <div class="interest__item-details">
+                    <h3 class="heading">
+                        Piața Unirii
+                    </h3>
+                    <p class="p__text light">
+                        Squarul central împreună cu faimoasele palatele Vulturl Negru.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="interest__item">
+                <div class="interest__item-img">
+                    <img src="img/recommend2.jpg" alt="interest">
+                </div>
+                <div class="interest__item-details">
+                    <h3 class="heading">
+                        Piața Unirii
+                    </h3>
+                    <p class="p__text light">
+                        Squarul central împreună cu faimoasele palatele Vulturl Negru.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="interest__item">
+                <div class="interest__item-img">
+                    <img src="img/recommend3.jpg" alt="interest">
+                </div>
+                <div class="interest__item-details">
+                    <h3 class="heading">
+                        Piața Unirii
+                    </h3>
+                    <p class="p__text light">
+                        Squarul central împreună cu faimoasele palatele Vulturl Negru.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================= -->
+<!-- ============== partners section ================= -->
+<!-- ================================================= -->
+<section class="partners">
+    <div class="container">
+        <h2 class="heading">
+            Parteneri
+        </h2>
+        <p class="p__text sub-heading">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex jcc no-gutters">
+            <div class="col-6 col-sm-2">
+                <img src="img/company1.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company2.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company3.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company4.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company5.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company6.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company7.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company8.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company9.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company10.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company11.png" alt="partner" class="img-fluid">
+            </div>
+            <div class="col-6 col-sm-2">
+                <img src="img/company12.png" alt="partner" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- ============== team  section ================= -->
+<!-- ================================================= -->
+<section class="team">
+    <div class="container">
+        <h2 class="heading">
+            Echipă noastră de încredere
+        </h2>
+        <p class="p__text sub-heading">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+    </div>
+
+    <div class="container small">
+        <div class="owl-carousel owl-theme owl-carousel2">
+            <div class="team__member">
+                <div class="team__member-img">
+                    <img src="img/team1.jpg" alt="team member">
+                </div>
+                <div class="team__member-details">
+                    <h3 class="heading">
+                        Jack R.
+                    </h3>
+                    <p class="p__text light">
+                        Client relations & PR
+                    </p>
+                </div>
+            </div>
+            
+            <div class="team__member">
+                <div class="team__member-img">
+                    <img src="img/team2.jpg" alt="team member">
+                </div>
+                <div class="team__member-details">
+                    <h3 class="heading">
+                        Peter J.
+                    </h3>
+                    <p class="p__text light">
+                        Real estate agent
+                    </p>
+                </div>
+            </div>
+            
+            <div class="team__member">
+                <div class="team__member-img">
+                    <img src="img/team3.jpg" alt="team member">
+                </div>
+                <div class="team__member-details">
+                    <h3 class="heading">
+                        Jessica M.
+                    </h3>
+                    <p class="p__text light">
+                        Booking specialist
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- ============== contact info  section ================= -->
+<!-- ================================================= -->
+<section class="contact">
+    <div class="contact__card tac">
+        <h3 class="heading desktop">
+            Contactează-ne utilizând datele sau formularul de contact
+        </h3>
+        <h3 class="heading mobile">
+            Contactează-ne utilizând datele de mai jos
+        </h3>
+        <div class="phone tac">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path class="a" d="M35.935,50a13.93,13.93,0,0,1-4.779-.854A50.963,50.963,0,0,1,12.65,37.35,50.959,50.959,0,0,1,.854,18.844a13.83,13.83,0,0,1-.706-6.8A14.182,14.182,0,0,1,7.437,1.665,13.923,13.923,0,0,1,14.1,0a1.563,1.563,0,0,1,1.528,1.235L18.084,12.68a1.563,1.563,0,0,1-.423,1.432L13.47,18.3A41.128,41.128,0,0,0,31.7,36.53l4.19-4.191a1.563,1.563,0,0,1,1.432-.423l11.445,2.452A1.562,1.562,0,0,1,50,35.9a13.922,13.922,0,0,1-1.665,6.666,14.182,14.182,0,0,1-10.381,7.289A13.9,13.9,0,0,1,35.935,50ZM12.855,3.193A10.948,10.948,0,0,0,3.791,17.777,47.391,47.391,0,0,0,32.223,46.209a10.948,10.948,0,0,0,14.584-9.064l-9.31-2-4.376,4.376a1.562,1.562,0,0,1-1.769.309A44.242,44.242,0,0,1,10.165,18.649a1.562,1.562,0,0,1,.309-1.769L14.85,12.5Z" transform="translate(0)"/></svg>
+        </div>
+        <h4 class="heading underlined">
+            <a href="tel:+40 770 138 307">+40 770 138 307</a>
+        </h4>
+        <h4 class="heading">
+            <a href="tel:+40 770 138 307">+40 770 138 307</a>
+        </h4>
+        <div class="message tac">
+            <svg xmlns="http://www.w3.org/2000/svg" width="65.641" height="50" viewBox="0 0 65.641 50"><g transform="translate(0 -61)"><g transform="translate(0 61)"><path class="a" d="M59.872,61H5.769A5.779,5.779,0,0,0,0,66.769v38.462A5.779,5.779,0,0,0,5.769,111h54.1a5.779,5.779,0,0,0,5.769-5.769V66.769A5.779,5.779,0,0,0,59.872,61Zm-.8,3.846L32.943,90.979,6.584,64.846ZM3.846,104.434V67.547L22.369,85.911Zm2.72,2.719L25.1,88.619l6.494,6.439a1.923,1.923,0,0,0,2.714-.006l6.332-6.332,18.434,18.434Zm55.229-2.72L43.361,86,61.795,67.566Z" transform="translate(0 -61)"/></g></g></svg>
+        </div>
+        <h4 class="heading">
+            <a href="mailto:office@flatwhite.ro">office@flatwhite.ro</a>
+        </h4>
+
+        <p class="p__text light">
+            Prin folosirea modalitatilor de contact îți exprimi acordul ca FlatWhite să te poata contacta cu scopul soluționării eventualelor întrebări.
+        </p>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- ============== services  section ================= -->
+<!-- ================================================= -->
+
+<section class="services tac">
+    <div class="container">
+        <div class="owl-carousel owl-theme owl-carousel3">
+            <div class="services__item">
+                <div class="services__item-img">
+                    <i class="far fa-handshake"></i>
+                </div>
+                <div class="services__item-details">
+                    <h3 class="heading">
+                        Preluăm, aranjăm și fotografiem proprietatea.
+                    </h3>
+                    <p class="p__text">
+                        După începerea colaborării vom prelua proprietatea, o vom aranja, fotografia și pregăti pentru listarea pe piață.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="services__item">
+                <div class="services__item-img">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="services__item-details">
+                    <h3 class="heading">
+                        Promovăm proprietatea în întreaga rețeauă.
+                    </h3>
+                    <p class="p__text">
+                        Ofertăm proprietatea în sistem centralizat pe toate rețelele de booking disponibile.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="services__item">
+                <div class="services__item-img">
+                    <i class="far fa-comments"></i>
+                </div>
+                <div class="services__item-details">
+                    <h3 class="heading">
+                        La dispoziția clientului non stop
+                    </h3>
+                    <p class="p__text">
+                        Turiștii ce vor vizita proprietatea ta vor beneficia de suport și informații din partea echipei noastre 24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================= -->
+<!-- ============== steps  section ================= -->
+<!-- ================================================= -->
+<section class="steps tac">
+    <div class="container">
+        <div class="owl-carousel owl-theme owl-carousel3">
+            <div class="steps__item">
+                <div class="steps__item-img">
+                    <i class="far fa-handshake"></i>
+                </div>
+                <div class="steps__item-details">
+                    <h3 class="heading">
+                        Pasul 1
+                    </h3>
+                    <p class="p__text">
+                        Dacă te gândești la o investiție profitabilă și fără bătăi de cap în domeniul turistic și imobiliar deopotrivă, îți stăm la dispoziție.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="steps__item">
+                <div class="steps__item-img">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="steps__item-details">
+                    <h3 class="heading">
+                        Pasul 2
+                    </h3>
+                    <p class="p__text">
+                        Ne întâlnim la proprietate și o evaluăm împreună pentru a stabili cotațiile corespunzătoare.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="steps__item">
+                <div class="steps__item-img">
+                    <i class="far fa-comments"></i>
+                </div>
+                <div class="steps__item-details">
+                    <h3 class="heading">
+                        Pasul 5
+                    </h3>
+                    <p class="p__text">
+                        Noi începem operarea iar tu începe să te bucuri de veniturile lunare.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tac">
+            <a href="#" class="btn">Evaluează proprietatea acum</a>
+            <a href="#" class="btn btn-step">Evaluează proprietatea acum</a>
+
+            
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- ============== showcase  section ================= -->
+<!-- ================================================= -->
+
+<section class="showcase">
+    <div class="container">
+        <div class="owl-carousel slider owl-carousel4">
+            <div class="showcase__item">
+                <figure class="showcase__item-img">
+                    <img src="img/recommend1.jpg" alt="showcase">
+                </figure>
+            </div>
+            <div class="showcase__item">
+                <figure class="showcase__item-img">
+                    <img src="img/recommend2.jpg" alt="showcase">
+                </figure>
+            </div>
+            <div class="showcase__item">
+                <figure class="showcase__item-img">
+                    <img src="img/recommend3.jpg" alt="showcase">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================= -->
+<!-- ============== footer  section ================= -->
+<!-- ================================================= -->
+
+<footer class="footer">
+    <div class="container big">
+        <div class="footer__grid">
+            <div class="footer__grid-item footer__grid-item1">
+                <div class="footer__info">
+                    <figure class="footer-logo">
+                        <img src="img/logo.png" alt="flatwhite">
+                    </figure>
+                    <p class="p__text">
+                        Flatwhite properties oferă clienților si partenerilor săi soluții optime pentru proprietăți cu serviciu regim hotelier.
+                    </p>
+                    <div class="social__links">
+                        <a href="#" class="social__links-item">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="#" class="social__links-item">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social__links-item">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__grid-item footer__grid-item2">
+                <div class="footer__links">
+                    <h3 class="heading">
+                        Linkuri rapide
+                    </h3>
+                    <ul class="footer__links-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Despre noi</a></li>
+                        <li><a href="#">Serviciile noastre</a></li>
+                        <li><a href="#">Evaluare proprietate</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__grid-item footer__grid-item3">
+                <div class="footer__links">
+                    <h3 class="heading">
+                        Termeni și condiții
+                    </h3>
+                    <ul class="footer__links-list">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Privacy & Cookies</a></li>
+                        <li><a href="#">Returns & refund policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__grid-item footer__grid-item4">
+                <div class="footer__links">
+                    <h3 class="heading">
+                        Alătură-te
+                    </h3>
+                    <ul class="footer__links-list">
+                        <li><a href="#">Parteneriate</a></li>
+                        <li><a href="#">Job-uri</a></li>
+                        <li><a href="#">Colaborator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__grid-item footer__grid-item5">
+                <div class="footer__links footer__newsletter">
+                    <h3 class="heading">
+                        Newsletter
+                    </h3>
+                    <p class="p__text">
+                        * Prin abonare la newsletter îmi exprim acordul ca flatwhite.ro sa îmi trimita newslettere cu scop informativ sau de marketing.
+                    </p>
+
+                    <form class="newsletter" action="#">
+                        <input class="input" placeholder="Adresa ta de e-mail" type="email">
+                        <button class="send">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="25.533" viewBox="0 0 15 25.533"><path class="a" d="M111.439,12.772,101.888,3.22a1.4,1.4,0,0,1,0-1.975l.837-.837a1.4,1.4,0,0,1,1.975,0l11.373,11.373a1.41,1.41,0,0,1,0,1.982L104.71,25.125a1.4,1.4,0,0,1-1.975,0l-.837-.837a1.4,1.4,0,0,1,0-1.975Z" transform="translate(-101.48 0)"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-footer tac">
+        <div class="footer__info acc1">
+            <figure class="footer-logo">
+                <img src="img/logo.png" alt="flatwhite">
+            </figure>
+            <p class="p__text">
+                Flatwhite properties oferă clienților si partenerilor săi soluții optime pentru proprietăți cu serviciu regim hotelier.
+            </p>
+            <div class="social__links">
+                <a href="#" class="social__links-item">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="#" class="social__links-item">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social__links-item">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__links acc2 accordions">
+            <button class="accordion">Linkuri rapide</button>
+            <div class="accordion__body">
+                <ul class="footer__links-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Despre noi</a></li>
+                    <li><a href="#">Serviciile noastre</a></li>
+                    <li><a href="#">Evaluare proprietate</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <button class="accordion acc3">Termeni și condiții</button>
+            <div class="accordion__body">
+                <ul class="footer__links-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Privacy & Cookies</a></li>
+                    <li><a href="#">Returns & refund policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <button class="accordion acc4">Alătură-te</button>
+            <div class="accordion__body">
+                <ul class="footer__links-list">
+                    <li><a href="#">Parteneriate</a></li>
+                    <li><a href="#">Job-uri</a></li>
+                    <li><a href="#">Colaborator</a></li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <div class="footer__newsletter">
+            <div class="footer__links footer__newsletter">
+                <h3 class="heading">
+                    Newsletter
+                </h3>
+                <p class="p__text">
+                    * Prin abonare la newsletter îmi exprim acordul ca flatwhite.ro sa îmi trimita newslettere cu scop informativ sau de marketing.
+                </p>
+
+                <form class="newsletter" action="#">
+                    <input class="input" placeholder="Adresa ta de e-mail" type="email">
+                    <button class="send">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="25.533" viewBox="0 0 15 25.533"><path class="a" d="M111.439,12.772,101.888,3.22a1.4,1.4,0,0,1,0-1.975l.837-.837a1.4,1.4,0,0,1,1.975,0l11.373,11.373a1.41,1.41,0,0,1,0,1.982L104.71,25.125a1.4,1.4,0,0,1-1.975,0l-.837-.837a1.4,1.4,0,0,1,0-1.975Z" transform="translate(-101.48 0)"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tac">
+        <p class="copyright">
+            &copy; 2020 Flatwhite.ro, toate drepturile rezervate.
+        </p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    let acc = document.getElementsByClassName("accordion");
+    
+
+    for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+    }
+
+</script>
+
+    <!-- bootstrap files -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Main js file -->
+    <script src="js/owl.js"></script>
+    <script src="js/jquery.nice-number.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/zebra_datepicker.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

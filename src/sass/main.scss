@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Neo Sans W1G';
+    src: url('../fonts/NeoSansW1G-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans W1G';
+    src: url('../fonts/NeoSansW1G-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans W1G';
+    src: url('../fonts/NeoSansW1G-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans W1G';
+    src: url('../fonts/NeoSansW1G-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@import "variables"; 
+@import "base";
+@import "typography"; 
+@import "header";   
+@import "recommendation";
+@import "interest";  
+@import "testimonial";  
+@import "partners";  
+@import "team";  
+@import "contact";  
+@import "services";  
+@import "steps";  
+@import "showcase";  
+@import "footer";
+@import "checkbox";
